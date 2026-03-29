@@ -12,10 +12,10 @@ jobs:
     strategy:
       matrix:
         service:
-          - Microservices/user-service
-          - Microservices/product-service
-          - Microservices/order-service
-          - Microservices/gateway-service
+          - microservices/user-service
+          - microservices/product-service
+          - microservices/order-service
+          - microservices/gateway-service
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
