@@ -2,7 +2,7 @@
 FROM node:16-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 
 # Production stage
 FROM node:16-alpine
