@@ -1,7 +1,7 @@
 # Build stage
 FROM node:16-alpine AS builder
 WORKDIR /app
-COPY package.json package-lock.json* ./
+COPY package*.json ./
 RUN npm ci --only=production
 
 # Production stage
