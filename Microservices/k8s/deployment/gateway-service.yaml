@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gateway-service
-        image: <your-dockerhub-username>/gateway-service:latest
+        image: amiy351/gateway-service:latest
         ports:
         - containerPort: 3003
         resources:

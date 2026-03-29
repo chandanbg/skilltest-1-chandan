@@ -14,7 +14,7 @@ spec:
       spec:
         containers:
           - name: product-service
-            image: <your-dockerhub-username>/product-service:latest
+            image: amiy351/product-service:latest
             ports:
             - containerPort: 3001
               resources:
