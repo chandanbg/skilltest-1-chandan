@@ -17,26 +17,26 @@ spec:
           image: amiy351/user-service:latest
           ports:
           - containerPort: 3000
-            resources:
-              requests:
-                memory: "128Mi"
-                cpu: "100m"
-              limits:
-                cpu: "300m"
-                memory: "256Mi"
-            env:
-            - name: SERVICE_NAME
-              value: "user-service"
-            livenessProbe:
-              httpGet:
-                path: /health
-                port: 3000
-              initialDelaySeconds: 10
-              periodSeconds: 10
-            readinessProbe:
-              httpGet:
-                path: /health
-                port: 3000
-              initialDelaySeconds: 5
-              periodSeconds: 5
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              cpu: "300m"
+              memory: "256Mi"
+          env:
+          - name: SERVICE_NAME
+            value: "user-service"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
                 

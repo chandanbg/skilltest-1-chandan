@@ -17,25 +17,25 @@ spec:
             image: amiy351/product-service:latest
             ports:
             - containerPort: 3001
-              resources:
-                requests:
-                  cpu: "100m"
-                  memory: "128Mi"
-                limits:
-                  cpu: "300m"
-                  memory: "256Mi"
-              env:
-              - name: SERVICE_NAME
-                value: "product-service"
-              livenessProbe:
-                httpGet:
-                  path: /health
-                  port: 3001
-                initialDelaySeconds: 10
-                periodSeconds: 10
-              readinessProbe:
-                httpGet:
-                  path: /health
-                  port: 3001
-                initialDelaySeconds: 5
-                periodSeconds: 5
+            resources:
+              requests:
+                cpu: "100m"
+                memory: "128Mi"
+              limits:
+                cpu: "300m"
+                memory: "256Mi"
+            env:
+            - name: SERVICE_NAME
+              value: "product-service"
+            livenessProbe:
+              httpGet:
+                path: /health
+                port: 3001
+              initialDelaySeconds: 10
+              periodSeconds: 10
+            readinessProbe:
+              httpGet:
+                path: /health
+                port: 3001
+              initialDelaySeconds: 5
+              periodSeconds: 5
